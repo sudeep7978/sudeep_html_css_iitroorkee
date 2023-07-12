@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vertical Bar Graph with Animation</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.bar-graph {
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background-color: #000;
+  transition: height 2s ease-in-out;
+}
+
+.bar-30 {
+  data-percentage: 30%;
+}
+
+.bar-40 {
+  data-percentage: 40%;
+}
+
+.bar-80 {
+  data-percentage: 80%;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<div class="bar-graph">
+  <div class="bar bar-30" id="bar-30"></div>
+  <h1>30%</h1>
+</div>
+<div class="bar-graph">
+  <div class="bar bar-40" id="bar-40"></div>
+  <h1>40%</h1>
+</div>
+<div class="bar-graph">
+  <div class="bar bar-80" id="bar-80"></div>
+  <h1>80%</h1>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var bar30 = document.getElementById("bar-30");
+  var bar40 = document.getElementById("bar-40");
+  var bar80 = document.getElementById("bar-80");
+
+  bar30.style.height = bar30.dataset.percentage + "%";
+  bar40.style.height = bar40.dataset.percentage + "%";
+  bar80.style.height = bar80.dataset.percentage + "%";
+});
+</script>
+</body>
+</html>
