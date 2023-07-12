@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gmail Account Creation Form</title>
+<style>
+body {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Gmail_logo.svg/1200px-Gmail_logo.svg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+input:focus {
+  background-color: #0000FF;
+  background-color: rgba(0, 0, 255, 0.35);
+}
+
+button {
+  background-color: #0000FF;
+  color: white;
+  padding: 10px;
+  width: 100px;
+}
+
+.form-container {
+  width: 400px;
+  margin: 0 auto;
+}
+</style>
+</head>
+<body>
+<div class="form-container">
+  <h1>Gmail Account Creation Form</h1>
+  <form action="/" method="post">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">Create Account</button>
+    <button type="reset">Reset</button>
+  </form>
+</div>
+</body>
+</html>
